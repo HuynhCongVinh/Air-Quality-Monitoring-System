@@ -1,0 +1,825 @@
+[
+    {
+        "id": "55f26fab05f1bbb4",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "fef755991d0afc4d",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "d979a6b84c870775",
+        "type": "ui_tab",
+        "name": "Giám sát chất lượng không khí",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "3c3827e0f1bbeb2b",
+        "type": "ui_group",
+        "name": "Thông số môi trường",
+        "tab": "d979a6b84c870775",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6ffbf5399004288b",
+        "type": "ui_group",
+        "name": "Chỉ số bụi mịn",
+        "tab": "d979a6b84c870775",
+        "order": 2,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e9dfad9913d28587",
+        "type": "ui_group",
+        "name": "Mức cảnh báo AQI",
+        "tab": "d979a6b84c870775",
+        "order": 3,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "45c69757abe22c22",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "82da758086f4ea0b",
+        "type": "ui_spacer",
+        "z": "55f26fab05f1bbb4",
+        "name": "spacer",
+        "group": "3c3827e0f1bbeb2b",
+        "order": 2,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "504a1cd38521cf49",
+        "type": "ui_spacer",
+        "z": "55f26fab05f1bbb4",
+        "name": "spacer",
+        "group": "3c3827e0f1bbeb2b",
+        "order": 3,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "e6adc0e59a2ca8e3",
+        "type": "ui_spacer",
+        "z": "55f26fab05f1bbb4",
+        "name": "spacer",
+        "group": "3c3827e0f1bbeb2b",
+        "order": 6,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "8e716b9cb4adf041",
+        "type": "ui_spacer",
+        "z": "55f26fab05f1bbb4",
+        "name": "spacer",
+        "group": "3c3827e0f1bbeb2b",
+        "order": 7,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "9a8072c0fd616e35",
+        "type": "ui_spacer",
+        "z": "55f26fab05f1bbb4",
+        "name": "spacer",
+        "group": "3c3827e0f1bbeb2b",
+        "order": 8,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "85ae24060264ea65",
+        "type": "ui_spacer",
+        "z": "55f26fab05f1bbb4",
+        "name": "spacer",
+        "group": "3c3827e0f1bbeb2b",
+        "order": 9,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "4851d95927db77c8",
+        "type": "ui_spacer",
+        "z": "55f26fab05f1bbb4",
+        "name": "spacer",
+        "group": "3c3827e0f1bbeb2b",
+        "order": 10,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "1797a72eaf4f7022",
+        "type": "ui_spacer",
+        "z": "55f26fab05f1bbb4",
+        "name": "spacer",
+        "group": "3c3827e0f1bbeb2b",
+        "order": 12,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "88a6978247953354",
+        "type": "ui_spacer",
+        "z": "55f26fab05f1bbb4",
+        "name": "spacer",
+        "group": "3c3827e0f1bbeb2b",
+        "order": 13,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "2f4265ae2464a565",
+        "type": "ui_spacer",
+        "z": "55f26fab05f1bbb4",
+        "name": "spacer",
+        "group": "3c3827e0f1bbeb2b",
+        "order": 14,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "43d0f7cf2530b6b3",
+        "type": "ui_spacer",
+        "z": "55f26fab05f1bbb4",
+        "name": "spacer",
+        "group": "3c3827e0f1bbeb2b",
+        "order": 15,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "af244c13fa47017e",
+        "type": "ui_spacer",
+        "z": "55f26fab05f1bbb4",
+        "name": "spacer",
+        "group": "3c3827e0f1bbeb2b",
+        "order": 16,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "11bba58ed59f9ac8",
+        "type": "mqtt in",
+        "z": "55f26fab05f1bbb4",
+        "name": "",
+        "topic": "sensor/air_quality",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "45c69757abe22c22",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 160,
+        "wires": [
+            [
+                "2648bc8852069e62"
+            ]
+        ]
+    },
+    {
+        "id": "2648bc8852069e62",
+        "type": "json",
+        "z": "55f26fab05f1bbb4",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 290,
+        "y": 160,
+        "wires": [
+            [
+                "5c13f32f5d51838c",
+                "5a03c68e430b8c2e",
+                "af1020ada1f46ca6",
+                "bb21eb30241f6465",
+                "031963f7a46ef03f",
+                "1ef2edcd810b4ad2",
+                "08197040ee9766b5"
+            ]
+        ]
+    },
+    {
+        "id": "af1020ada1f46ca6",
+        "type": "function",
+        "z": "55f26fab05f1bbb4",
+        "name": "Lấy nhiệt độ",
+        "func": "if (typeof msg.payload === 'string') {\n    msg.payload = JSON.parse(msg.payload);\n}\n\nvar data = msg.payload;\nmsg.payload = data.temp; \n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 160,
+        "wires": [
+            [
+                "f57406f0696eaa31"
+            ]
+        ]
+    },
+    {
+        "id": "f57406f0696eaa31",
+        "type": "ui_gauge",
+        "z": "55f26fab05f1bbb4",
+        "name": "",
+        "group": "3c3827e0f1bbeb2b",
+        "order": 4,
+        "width": 5,
+        "height": 5,
+        "gtype": "gage",
+        "title": "Nhiệt độ",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "25",
+        "seg2": "35",
+        "diff": false,
+        "className": "",
+        "x": 740,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "5c13f32f5d51838c",
+        "type": "function",
+        "z": "55f26fab05f1bbb4",
+        "name": "Lấy PM2.5",
+        "func": "var data = msg.payload;\n// Kiểm tra nếu là chuỗi thì chuyển sang Object\nif (typeof data === 'string') data = JSON.parse(data);\n\nif (data && data[\"pm2.5\"] !== undefined) {\n    msg.payload = Number(data[\"pm2.5\"]); // Ép về kiểu số\n    msg.topic = \"Thực tế (cảm biến)\";\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 280,
+        "wires": [
+            [
+                "c1f3ca34b8b0c5fd"
+            ]
+        ]
+    },
+    {
+        "id": "c1f3ca34b8b0c5fd",
+        "type": "ui_chart",
+        "z": "55f26fab05f1bbb4",
+        "name": "",
+        "group": "6ffbf5399004288b",
+        "order": 1,
+        "width": 8,
+        "height": 6,
+        "label": "Biểu đồ bụi PM2.5 - So sánh Thực tế vs Dự báo",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 860,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5a03c68e430b8c2e",
+        "type": "debug",
+        "z": "55f26fab05f1bbb4",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "bb21eb30241f6465",
+        "type": "function",
+        "z": "55f26fab05f1bbb4",
+        "name": "Lấy eCO2",
+        "func": "var data = msg.payload;\nif (typeof data === 'string') data = JSON.parse(data);\n\n// Phải là chữ eco2 viết thường\nmsg.payload = data.eco2; \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 200,
+        "wires": [
+            [
+                "b003b4bc8c3a7eee"
+            ]
+        ]
+    },
+    {
+        "id": "b003b4bc8c3a7eee",
+        "type": "ui_gauge",
+        "z": "55f26fab05f1bbb4",
+        "name": "",
+        "group": "3c3827e0f1bbeb2b",
+        "order": 11,
+        "width": 5,
+        "height": 5,
+        "gtype": "gage",
+        "title": "Khí eCO2",
+        "label": "ppm",
+        "format": "{{value}}",
+        "min": "400",
+        "max": "2000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "800",
+        "seg2": "1200",
+        "diff": false,
+        "className": "",
+        "x": 740,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "031963f7a46ef03f",
+        "type": "function",
+        "z": "55f26fab05f1bbb4",
+        "name": "Lấy thời gian",
+        "func": "if (typeof msg.payload === 'string') {\n    msg.payload = JSON.parse(msg.payload);\n}\n\nvar data = msg.payload;\n// Lấy giá trị từ biến 'time'\nmsg.payload = data.time; \n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 120,
+        "wires": [
+            [
+                "b550ae5bb348fbd3"
+            ]
+        ]
+    },
+    {
+        "id": "b550ae5bb348fbd3",
+        "type": "ui_text",
+        "z": "55f26fab05f1bbb4",
+        "group": "3c3827e0f1bbeb2b",
+        "order": 1,
+        "width": 6,
+        "height": 2,
+        "name": "",
+        "label": "Cập nhật cuối:",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "Times New Roman,Times,serif",
+        "fontSize": "20",
+        "color": "#000000",
+        "x": 760,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "1ef2edcd810b4ad2",
+        "type": "function",
+        "z": "55f26fab05f1bbb4",
+        "name": "Lấy độ ẩm",
+        "func": "var data = msg.payload;\nif (typeof data === 'string') data = JSON.parse(data);\n\n// Phải là chữ hum viết thường\nmsg.payload = data.hum; \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 240,
+        "wires": [
+            [
+                "85116f0a95b8a21c"
+            ]
+        ]
+    },
+    {
+        "id": "85116f0a95b8a21c",
+        "type": "ui_gauge",
+        "z": "55f26fab05f1bbb4",
+        "name": "",
+        "group": "3c3827e0f1bbeb2b",
+        "order": 5,
+        "width": 5,
+        "height": 5,
+        "gtype": "gage",
+        "title": "Độ ẩm",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "40",
+        "seg2": "70",
+        "diff": false,
+        "className": "",
+        "x": 730,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "2ca2cba5dd56d33d",
+        "type": "mqtt in",
+        "z": "55f26fab05f1bbb4",
+        "name": "",
+        "topic": "sensor/prediction",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "45c69757abe22c22",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 380,
+        "wires": [
+            [
+                "a3519aa557396023"
+            ]
+        ]
+    },
+    {
+        "id": "a3519aa557396023",
+        "type": "json",
+        "z": "55f26fab05f1bbb4",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 290,
+        "y": 380,
+        "wires": [
+            [
+                "3f744ea1ce87478b"
+            ]
+        ]
+    },
+    {
+        "id": "3f744ea1ce87478b",
+        "type": "function",
+        "z": "55f26fab05f1bbb4",
+        "name": "Xử lý dự báo PM2.5",
+        "func": "var data = msg.payload;\nif (typeof data === 'string') data = JSON.parse(data);\n\nif (data && data.target_pm25 !== undefined) {\n    msg.payload = Number(data.target_pm25); // Ép về kiểu số\n    msg.topic = \"Dự báo (AI)\";\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 380,
+        "wires": [
+            [
+                "c1f3ca34b8b0c5fd",
+                "c588eaa7cdb7b0c1"
+            ]
+        ]
+    },
+    {
+        "id": "c588eaa7cdb7b0c1",
+        "type": "debug",
+        "z": "55f26fab05f1bbb4",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "08197040ee9766b5",
+        "type": "function",
+        "z": "55f26fab05f1bbb4",
+        "name": "Tính toán AQI",
+        "func": "var pm25 = Number(msg.payload[\"pm2.5\"]);\nvar aqi = 0;\n\n// Công thức tính AQI chuẩn cho PM2.5 (6 mức)\nif (pm25 <= 12) {\n    aqi = ((50 - 0) / (12 - 0)) * (pm25 - 0) + 0;\n} else if (pm25 <= 35.4) {\n    aqi = ((100 - 51) / (35.4 - 12.1)) * (pm25 - 12.1) + 51;\n} else if (pm25 <= 55.4) {\n    aqi = ((150 - 101) / (55.4 - 35.5)) * (pm25 - 35.5) + 101;\n} else if (pm25 <= 150.4) {\n    aqi = ((200 - 151) / (150.4 - 55.5)) * (pm25 - 55.5) + 151;\n} else if (pm25 <= 250.4) {\n    aqi = ((300 - 201) / (250.4 - 150.5)) * (pm25 - 150.5) + 201;\n} else {\n    aqi = ((500 - 301) / (500.4 - 250.5)) * (pm25 - 250.5) + 301;\n}\n\nmsg.payload = Math.round(aqi); // Làm tròn số AQI\nmsg.topic = \"Chỉ số AQI\";\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 440,
+        "wires": [
+            [
+                "c9523e24bab8f793",
+                "48b378fef8b653cc"
+            ]
+        ]
+    },
+    {
+        "id": "48b378fef8b653cc",
+        "type": "ui_artlessgauge",
+        "z": "55f26fab05f1bbb4",
+        "group": "e9dfad9913d28587",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "icon": "",
+        "label": "Mức độ AQI",
+        "unit": "",
+        "layout": "linear",
+        "decimals": 0,
+        "differential": false,
+        "minmax": false,
+        "colorTrack": "#555555",
+        "style": "",
+        "colorFromTheme": true,
+        "property": "payload",
+        "secondary": "secondary",
+        "inline": false,
+        "animate": true,
+        "sectors": [
+            {
+                "val": 0,
+                "col": "#00ff4c",
+                "t": "min",
+                "dot": 3
+            },
+            {
+                "val": 50,
+                "col": "#edff66",
+                "t": "sec",
+                "dot": 3
+            },
+            {
+                "val": 100,
+                "col": "#ffb54d",
+                "t": "sec",
+                "dot": 3
+            },
+            {
+                "val": 150,
+                "col": "#ff0000",
+                "t": "sec",
+                "dot": 3
+            },
+            {
+                "val": 200,
+                "col": "#ad33ff",
+                "t": "sec",
+                "dot": 3
+            },
+            {
+                "val": 250,
+                "col": "#9a3f0e",
+                "t": "sec",
+                "dot": 0
+            },
+            {
+                "val": 300,
+                "col": "#9a3f0e",
+                "t": "max",
+                "dot": 3
+            }
+        ],
+        "lineWidth": "7",
+        "bgcolorFromTheme": true,
+        "diffCenter": "",
+        "x": 760,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "c9523e24bab8f793",
+        "type": "function",
+        "z": "55f26fab05f1bbb4",
+        "name": "Logic cảnh báo",
+        "func": "var aqi = msg.payload; // Lấy giá trị từ nút Tính AQI ở trên\n\nif (aqi > 150) {\n    return {\n        payload: \"CẢNH BÁO: Không khí đang ở mức XẤU (\" + aqi + \"). Hãy đóng cửa sổ!\",\n        topic: \"Cảnh báo nguy hiểm\",\n        image: \"https://cdn-icons-png.flaticon.com/512/564/564619.png\" // Icon cảnh báo\n    };\n}\nreturn null; // Nếu AQI thấp thì không làm gì cả",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 480,
+        "wires": [
+            [
+                "095d40d742409756"
+            ]
+        ]
+    },
+    {
+        "id": "095d40d742409756",
+        "type": "ui_toast",
+        "z": "55f26fab05f1bbb4",
+        "position": "top right",
+        "displayTime": "5",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "CẢNH BÁO AQI",
+        "name": "",
+        "x": 870,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "c7abea23e043f1c7",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6",
+            "node-red-contrib-ui-artless-gauge": "0.3.12"
+        }
+    }
+]
