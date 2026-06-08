@@ -54,7 +54,7 @@ The system also includes a basic AI model for short-term air quality prediction.
 
 ---
 
-## Hardware Prototype
+## Dashboard Flow
 
 ![Dashboard Flow](images/dashboard_flow.png)
 
