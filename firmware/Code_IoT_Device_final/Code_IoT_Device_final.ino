@@ -9,9 +9,9 @@
 #include <SD.h>
 
 // --- CẤU HÌNH HỆ THỐNG ---
-const char* ssid = "R0mj";
-const char* password = "thoaimai";
-const char* mqtt_server = "10.49.25.150"; 
+const char* ssid = "KTX2-201";
+const char* password = "6868686868";
+const char* mqtt_server = "192.168.1.4"; 
 
 // --- KHAI BÁO CHÂN VÀ THIẾT BỊ ---
 #define DHTPIN 4
